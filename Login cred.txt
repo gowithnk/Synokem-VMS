@@ -1,0 +1,1 @@
+NOTE: For admin login, (username: admin password: admin) AND For user login, (guard, guard)
