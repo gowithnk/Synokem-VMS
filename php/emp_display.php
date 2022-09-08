@@ -45,7 +45,7 @@ echo "<table align='center' border='1'>";
 	echo "<tr>";
 		echo "<th> Name</th>";
 		echo "<th> Gender</th>";
-		echo "<th> Age</th>";
+		echo "<th> Emp. Code</th>";
 		echo "<th> Phone</th>";
 		echo "<th> E-mail</th>";
 		echo "<th> Department</th>";

@@ -55,16 +55,17 @@ function onlyAlphabets(evt) {
 		$query=mysqli_query($db,$sql);
 						
 			while($fetch=mysqli_fetch_array($query)) {
+			
 		?>
 		<option value="<?php echo $fetch[1]?>"><?php echo $fetch[1]?></option>
-
+			
 		<?php
 		}
 		?>
 
 		</select><br>
 			<label style="margin-left:10px;">Whom To Meet : </label>
-				<select name="person_meet"   style="border-radius: 5px; height: 30px;color: #000; width: 50%; margin: 5px 10px">
+				<select name="person_meet_id"   style="border-radius: 5px; height: 30px;color: #000; width: 50%; margin: 5px 10px">
 					<?php 
 						include ('dbconn.php');
 						$sql="Select * from emp_table";
@@ -72,7 +73,7 @@ function onlyAlphabets(evt) {
 						
 						while($fetch=mysqli_fetch_array($query)) {
 							?>
-							<option value="<?php echo $fetch[1]?>"><?php echo $fetch[1]?></option>
+							<option value="<?php echo $fetch[0]?>"><?php echo $fetch[1]?></option>
 
 							<?php
 						}

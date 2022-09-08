@@ -14,9 +14,17 @@ $name=$_POST['name1'];
 $gender=$_POST['gender'];
 $phone=$_POST['phone'];
 $department=$_POST['department'];
-$person_meet=$_POST['person_meet'];
+
 $in_time=date("h:i");
 $date=date("Y-m-d");
+$person_meet_id=$_POST['person_meet_id'];
+
+$sql="Select * from emp_table where id=$person_meet_id";
+$query=mysqli_query($db,$sql);
+
+$fetch=mysqli_fetch_array($query);
+$empEmail = $fetch['email_id'];
+$person_meet=$fetch['name'];
 
 $img = $_POST['image'];
     $folderPath = "upload/";
@@ -61,15 +69,15 @@ try {
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    if($person_meet == "Niranjan"){
-        $empEmail = "apps@synokempharma.com";
-    }elseif($person_meet == "Preeti Jain"){
-        $empEmail = "hr@synokempharma.com";
-    }elseif($person_meet == "Sanjeev kumar"){
-        $empEmail = "it@synokempharma.com";
-    }else{
-        $empEmail = "it@synokempharma.com";
-    }
+    // if($person_meet == "Niranjan"){
+    //     $empEmail = "apps@synokempharma.com";
+    // }elseif($person_meet == "Preeti Jain"){
+    //     $empEmail = "hr@synokempharma.com";
+    // }elseif($person_meet == "Sanjeev kumar"){
+    //     $empEmail = "it@synokempharma.com";
+    // }else{
+    //     $empEmail = "it@synokempharma.com";
+    // }
     
     $mail->setFrom('synokem.apps@gmail.com', 'Synokem VMS');
     $mail->addAddress($empEmail, 'Niranjan');     //Add a recipient
