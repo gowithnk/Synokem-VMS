@@ -87,7 +87,7 @@ try {
 
     $mail->send();
     echo 'Message has been sent';
-} catch (Exception $e) {
+}catch (Exception $e) {
     echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
