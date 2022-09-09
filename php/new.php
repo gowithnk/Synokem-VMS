@@ -1,7 +1,7 @@
 <?php
 session_start();
 $e=$_SESSION['qr'];
-
+// Email config...
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -14,14 +14,12 @@ $name=$_POST['name1'];
 $gender=$_POST['gender'];
 $phone=$_POST['phone'];
 $department=$_POST['department'];
-
 $in_time=date("h:i");
 $date=date("Y-m-d");
 $person_meet_id=$_POST['person_meet_id'];
 
 $sql="Select * from emp_table where id=$person_meet_id";
 $query=mysqli_query($db,$sql);
-
 $fetch=mysqli_fetch_array($query);
 $empEmail = $fetch['email_id'];
 $person_meet=$fetch['name'];
@@ -71,18 +69,15 @@ try {
     //Recipients
     // if($person_meet == "Niranjan"){
     //     $empEmail = "apps@synokempharma.com";
-    // }elseif($person_meet == "Preeti Jain"){
-    //     $empEmail = "hr@synokempharma.com";
     // }elseif($person_meet == "Sanjeev kumar"){
     //     $empEmail = "it@synokempharma.com";
     // }else{
-    //     $empEmail = "it@synokempharma.com";
+    //     $empEmail = "apps@synokempharma.com";
     // }
     
     $mail->setFrom('synokem.apps@gmail.com', 'Synokem VMS');
     $mail->addAddress($empEmail, 'Niranjan');     //Add a recipient
     $mail->addAttachment($file);         //Add attachments
-
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
@@ -93,10 +88,8 @@ try {
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-
-
 
 $sql="insert into inquery(Name,Gender,Phone,Department,Person_Meet,In_Time,Date,qr_code,Image) values(
 '$name','$gender','$phone','$department','$person_meet','$in_time','$date','$e','$file')"; 
