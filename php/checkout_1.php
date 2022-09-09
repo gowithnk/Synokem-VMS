@@ -21,16 +21,17 @@ if($count<0)
 else
 {
 	echo "<script>
-		alert('not exist');
+		alert('phone number not exist');
 	</script>";
-} */
+}
+*/
 
 $sql="UPDATE inquery SET Out_Time='$out_time' where Phone='$phone' and Date='$date' and Id='$p'";
 $query=mysqli_query($db,$sql);
 if($query)
 {
 	echo "<script>
-		alert('Visitor Out time Update');
+		alert('Visitor Out time Updated');
 		location.href='../dashboard.php';
 		</script>";
 }

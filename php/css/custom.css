@@ -24,14 +24,11 @@
 	border:0px solid black;
 	font-family: verdana;
 	width: 90%;
-	background-image: url(../images/grad.png);
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 .slip_left
 {
 	border:0px solid black;
-	width: 62%;
+	width: 65%;
 	font-family: verdana;
 	float: left;
 	padding: 25px;
@@ -40,7 +37,6 @@
 .slip_right
 {
 	width: 25%;
-	margin-top: 20px;
 	float: right;
 	border:0px solid black;
 }

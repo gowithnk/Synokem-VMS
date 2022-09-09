@@ -141,8 +141,6 @@ include('../topbar.php');
     <script src="assets/js/progress-bar/number-pb.js"></script>
     <script src="assets/js/progress-bar/progress-app.js"></script>
 
-
-
     <!-- MAIN EFFECT -->
     <script type="text/javascript" src="assets/js/preloader.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
@@ -151,12 +149,9 @@ include('../topbar.php');
     <script type="text/javascript" src="assets/js/main.js"></script>
 
 
-
-
     <!-- GAGE -->
 
 
-    
     <script src="assets/js/jhere-custom.js"></script>
 
     <script>

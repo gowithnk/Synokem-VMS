@@ -16,12 +16,13 @@ $fetch=mysqli_fetch_array($query);
 <body>
 <form action="../index_1.php" method="post">
 	<div class="slip_main">
-	<img src="../images/header.jpg" height="160px" width="100%">
+
 <!--Left box in the main form-->
 		<div class="slip_left">
-			<label>Name : </label>
-			<input type="text" name="name" value="<?php echo "$fetch[1]";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 56px;"><br>
-			<label>Gender : </label>
+			<img src="../images/logo.png" width="200px"><br><br>
+			<label style="word-spacing: -2px; font-weight:600;">Name : </label>
+			<input disabled type="text" name="name" value="<?php echo "$fetch[1]";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 65px;"><br>
+			<!-- <label>Gender : </label>
 			<?php 
 				if($fetch[2]=="male")
 				{
@@ -42,16 +43,16 @@ $fetch=mysqli_fetch_array($query);
 			<label>Phone no : </label>
 			<input type="text" name="phone" value="<?php echo "$phone";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 35px;"><br>
 			<label>Department : </label>
-			<input type="text" name="department" value="<?php echo "$fetch[5]";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 19px;"><br>
-			<label style="word-spacing: -2px;">Whom To Meet : </label>
-			<input type="text" name="person_meet" value="<?php echo "$fetch[6]";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 10px;"><br>
-			<label style="word-spacing: -2px;">Check In : </label>
-			<input type="text" name="in_time" value="<?php echo "$fetch[7]";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 44px;"><br>
-			<label style="word-spacing: -2px;">Date : </label>
-			<input type="text" name="date" value="<?php echo "$fetch[10]";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 67px;"><br>
+			<input type="text" name="department" value="<?php echo "$fetch[5]";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 19px;"><br> -->
+			<label style="word-spacing: -2px; font-weight:600;">Whom To Meet : </label>
+			<input disabled type="text" name="person_meet" value="<?php echo "$fetch[6]";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 7px;"><br>
+			<label style="word-spacing: -2px; font-weight:600;">Entry Time : </label>
+			<input disabled type="text" name="in_time" value="<?php echo "$fetch[7]";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 33px;"><br>
+			<label style="word-spacing: -2px; font-weight:600;">Date : </label>
+			<input disabled type="text" name="date" value="<?php echo "$fetch[10]";?>" style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 73px;"><br>
 			<div class="slip_btn">	
-				<input type="button" id="p1" value="Print" style="height: 25px; border-radius: 5px;border: 1px solid black; margin: 0px 10px; padding: 5px 30px;" onclick="print1()"><br>
-				<a href="../dashboard.php">	<input type="button" id="p2" value="Back" style="height: 25px; border-radius: 5px; margin: 0px 10px; border: 1px solid black;padding: 5px 30px;" ></a><br>
+				<input type="button" id="p1" value="Print" style="height: 25px; border-radius: 5px;border: 1px solid black; margin: 0px 10px; padding: 5px 30px; background-color:#d9e8f7; cursor:pointer;" onclick="print1()"><br>
+				<a href="../dashboard.php">	<input type="button" id="p2" value="Back" style="height: 25px; border-radius: 5px; margin: 0px 10px; border: 1px solid black;padding: 5px 30px; background-color:#d9e8f7; cursor:pointer;" ></a><br>
 			</div>
 		</div>
 <!--Right box in the main form-->
@@ -75,9 +76,9 @@ $fetch=mysqli_fetch_array($query);
 		<div class="slip_instruction">
 			<h4>Instruction To Follow:</h4>
 			<ul>
-				<li>Take a summer or night class.</li>
-				<li>Tell us in which subjects you need help so that we can hepl to raise your skills to the next level.</li>
- 				<li>Remember, a low score doesn't necessarily mean you're bad in a subject. It just means you haven't learned the subject yet.</li>
+			<li>Visitors should sign in at the [reception/ gate/ front-office] and show some form of identification.</li>
+			<li>Visitors will receive passess and return them to [reception/ gate/ front-office] once the visit is over.</li>
+			<li>Employees must always tend to their visitors while they are inside our premises.</li>
 			</ul>
 		</div>
 	</div>
