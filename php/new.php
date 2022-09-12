@@ -1,7 +1,7 @@
 <?php
 session_start();
 $e=$_SESSION['qr'];
-// Email config...
+// Email
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -14,12 +14,14 @@ $name=$_POST['name1'];
 $gender=$_POST['gender'];
 $phone=$_POST['phone'];
 $department=$_POST['department'];
+
 $in_time=date("h:i");
 $date=date("Y-m-d");
 $person_meet_id=$_POST['person_meet_id'];
 
 $sql="Select * from emp_table where id=$person_meet_id";
 $query=mysqli_query($db,$sql);
+
 $fetch=mysqli_fetch_array($query);
 $empEmail = $fetch['email_id'];
 $person_meet=$fetch['name'];
@@ -36,6 +38,8 @@ $img = $_POST['image'];
   
     $file = $folderPath . $fileName;
     file_put_contents($file, $image_base64);	
+
+//SMS
 
 
 // mail
@@ -62,7 +66,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'synokem.apps@gmail.com';                     //SMTP username
-    $mail->Password   = 'fcrdykbldruvkwfa';                               //SMTP password
+    $mail->Password   = 'yfpneyjqsquoujgq';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -87,7 +91,7 @@ try {
 
     $mail->send();
     echo 'Message has been sent';
-}catch (Exception $e) {
+} catch (Exception $e) {
     echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 

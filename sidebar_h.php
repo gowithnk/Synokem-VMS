@@ -23,7 +23,7 @@
                             </a>
                         </li>
                          <li>
-                            <a class="tooltip-tip ajax-load" href="../dashboard.php" title="Create Pass">
+                            <a class="tooltip-tip ajax-load" href="/vms/dashboard.php" title="Create Pass">
                                 <i class="icon-feed"></i>
                                 <span>Home</span>
 
