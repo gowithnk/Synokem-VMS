@@ -45,22 +45,25 @@
 <?php
 include('dbconn.php');
 
-$sql="Select * from inquery order by name";
+$sql="Select * from inquery";
 $query=mysqli_query($db,$sql);
+$fetch=mysqli_fetch_array($query);
 
 $sql = "SELECT * FROM inquery WHERE Out_Time IS NULL OR Out_Time = '' ";
 if ($result = mysqli_query($db, $sql)) {
     // Return the number of rows in result set
     $rowcount = mysqli_num_rows( $result );
+    $rowdata = mysqli_fetch_array( $result );
     // Display result
-    // printf("Total rows in this table :  %d\n", $rowcount);
+   
  }
 
-if($rowcount == 0){
+if(!empty($rowcount == 0)){
     echo '<h2 style="color:red;">No Active Visitors</h2>';
 } else{
     echo '<h2 style="color:#ffffff;">Active Visitors</h2>';
 }
+
 
     echo "<table align='center' border='1'>";
     if(empty($rowcount == 0)){
@@ -73,9 +76,8 @@ if($rowcount == 0){
     
 while ($fetch=mysqli_fetch_array($query))
  {
-	$rowcount = mysqli_num_rows( $result );
 	echo "<tr>";
-    if(empty($rowcount == 0)){ 
+    if(empty($fetch[8])){ 
     echo "<td> $fetch[Name] </td>";
     echo "<td> $fetch[Phone] </td>";
     echo "<td> <a class='delete_data' href='checkout_0.php'> Log out</a> </td>";

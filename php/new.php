@@ -40,7 +40,62 @@ $img = $_POST['image'];
     file_put_contents($file, $image_base64);	
 
 //SMS
+$fields = array(
+    "sender_id" => "TXTIND",
+    "message" => "This is a test message",
+    "route" => "v3",
+    "numbers" => "7837813388",
+);
 
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://www.fast2sms.com/dev/bulkV2",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_SSL_VERIFYHOST => 0,
+  CURLOPT_SSL_VERIFYPEER => 0,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => json_encode($fields),
+  CURLOPT_HTTPHEADER => array(
+    "authorization: 0wBVRXoR6NTEquV0UIorparuKU7KXKT2O1Xj0Ax6AyRAFc82qq9dNXYxdy8z",
+    "accept: */*",
+    "cache-control: no-cache",
+    "content-type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
+
+// Account details
+// $apiKey = urlencode('MzQ0NTcxMzg1NDMzNGY1MzQ1NjU2NzUyNmMzMzY0Nzc=	');
+	
+// $numbers = array($phone);
+// $sender = urlencode('600010');
+// $message = rawurlencode('Hi there, thank you for sending your first test message from Textlocal. See how you can send effective SMS campaigns here: https://tx.gl/r/2nGVj/');
+
+// $numbers = implode(',', $numbers);
+// $data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+// $ch = curl_init('https://api.textlocal.in/send/');
+// curl_setopt($ch, CURLOPT_POST, true);
+// curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// $response = curl_exec($ch);
+// curl_close($ch);
+// echo $response;
 
 // mail
 
@@ -66,18 +121,11 @@ try {
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'synokem.apps@gmail.com';                     //SMTP username
-    $mail->Password   = 'yfpneyjqsquoujgq';                               //SMTP password
+    $mail->Password   = 'yfpneyjqsquoujgq';                              //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-    //Recipients
-    // if($person_meet == "Niranjan"){
-    //     $empEmail = "apps@synokempharma.com";
-    // }elseif($person_meet == "Sanjeev kumar"){
-    //     $empEmail = "it@synokempharma.com";
-    // }else{
-    //     $empEmail = "apps@synokempharma.com";
-    // }
+
     
     $mail->setFrom('synokem.apps@gmail.com', 'Synokem VMS');
     $mail->addAddress($empEmail, 'Niranjan');     //Add a recipient

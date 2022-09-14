@@ -14,10 +14,10 @@ if($count>0)
 {	
 	if($fetch[8]=="")
 	{
-		echo"<script>alert('Out time'); 
+		echo"<script>alert('Visitor already logged in'); 
 		location.href='../dashboard.php';
 		</script>";
-	}
+	}	
 	else
 	{
 		$_SESSION['phone']=$phone;

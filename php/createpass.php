@@ -38,7 +38,7 @@ function onlyAlphabets(evt) {
 <h1>Create Pass</h1>         
 	<div class="left">
 		<label style="margin-left:10px;">Name : </label>
-		<input type="text" name="name1" onkeypress="return onlyAlphabets(event);"  placeholder="Name" value="<?php echo $fetch ?>"  
+		<input type="text" name="name1" onkeypress="return onlyAlphabets(event);"  placeholder="Name" value=""  
 		style="width: 50%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 70px;"><br>           
 		<label style="margin-left:10px;">Gender : </label>             
 		<input <?php if($fetch=="male"){echo "checked";} ?> type="radio" name="gender" value="male" style="margin-left: 60px;"><label style="margin-left: 5px;">Male</label>             
