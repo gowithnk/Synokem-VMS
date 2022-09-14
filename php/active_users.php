@@ -53,7 +53,6 @@ $sql = "SELECT * FROM inquery WHERE Out_Time IS NULL OR Out_Time = '' ";
 if ($result = mysqli_query($db, $sql)) {
     // Return the number of rows in result set
     $rowcount = mysqli_num_rows( $result );
-    $rowdata = mysqli_fetch_array( $result );
     // Display result
    
  }

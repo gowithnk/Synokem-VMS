@@ -25,6 +25,8 @@ $query=mysqli_query($db,$sql);
 $fetch=mysqli_fetch_array($query);
 $empEmail = $fetch['email_id'];
 $person_meet=$fetch['name'];
+$empPhone=$fetch['phone'];
+
 
 $img = $_POST['image'];
     $folderPath = "upload/";
@@ -40,11 +42,12 @@ $img = $_POST['image'];
     file_put_contents($file, $image_base64);	
 
 //SMS
+$smsMsg = 'New Visitor: ------- Name - ' .$name .', Phone Number - ' .$phone .', Entry Time - ' .$in_time; 
 $fields = array(
     "sender_id" => "TXTIND",
-    "message" => "This is a test message",
+    "message" => "$smsMsg",
     "route" => "v3",
-    "numbers" => "7837813388",
+    "numbers" => "$empPhone",
 );
 
 $curl = curl_init();

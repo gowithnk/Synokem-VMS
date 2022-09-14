@@ -6,25 +6,16 @@ $sql="Select count(*) from inquery";
 $query=mysqli_query($db,$sql);
 $fetch=mysqli_fetch_array($query);
 
-?>
-<?php
-
-include('php/dbconn.php');
-
 $sql="Select count(*) from emp_table";
 $query=mysqli_query($db,$sql);
 $fetch1=mysqli_fetch_array($query);
-
-?>
-<?php
-
-include('php/dbconn.php');
 
 $sql="Select count(*) from department";
 $query=mysqli_query($db,$sql);
 $fetch2=mysqli_fetch_array($query);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
