@@ -2,7 +2,11 @@
 
  <div id="skin-select">
         <div id="logo">
-        <h1 style="text-align:left;"><a href="/vms/dashboard.php" style="color:#ffffff;">VMS </a>
+        <h1 style="text-align:left;">
+        
+        <a href="/vms/dashboard.php" style="color:#ffffff;"><img src="images/synokem-logo.png" 
+            style="margin-right: 5px; margin-top: -8px;"
+            width="30" alt="logo" > VMS </a>
             </h1>
         </div>
 
