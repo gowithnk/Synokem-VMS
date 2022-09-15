@@ -42,7 +42,7 @@ $img = $_POST['image'];
     file_put_contents($file, $image_base64);	
 
 //SMS
-$smsMsg = 'New Visitor: ------- Name - ' .$name .', Phone Number - ' .$phone .', Entry Time - ' .$in_time; 
+$smsMsg = 'New Visitor : - - - - - - Name - ' .$name .', Phone Number - ' .$phone .', Entry Time - ' .$in_time; 
 $fields = array(
     "sender_id" => "TXTIND",
     "message" => "$smsMsg",
