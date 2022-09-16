@@ -2,7 +2,7 @@
 
  <div id="skin-select">
         <div id="logo">
-        <h1 style="text-align:left;"><a href="/vms/dashboard.php" style="color:#ffffff;"><img src="images/synokem-logo.png" 
+        <h1 style="text-align:left;"><a href="/vms/dashboard.php" style="color:#ffffff;"><img src="/vms/images/synokem-logo.png" 
             style="margin-right: 5px; margin-top: -8px;"
             width="30" alt="logo" > VMS </a>
             </h1>
@@ -26,7 +26,7 @@
                         </li>
                          <li>
                             <a class="tooltip-tip ajax-load" href="../dashboard.php" title="Create Pass">
-                                <i class="icon-feed"></i>
+                                <i class="icon-home"></i>
                                 <span>Home</span>
 
                             </a>
@@ -58,7 +58,7 @@
                         
                         <li>
                             <a class="tooltip-tip ajax-load" href="/vms/php/logout.php?log" title="Log out">
-                                <i class="icon-feed"></i>
+                                <i class="icon-chevron-right"></i>
                                 <span>Log Out</span>
                             </a>
                         </li>

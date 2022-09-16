@@ -4,7 +4,7 @@
         <div id="logo">
         <h1 style="text-align:left;">
         
-        <a href="/vms/dashboard.php" style="color:#ffffff;"><img src="images/synokem-logo.png" 
+        <a href="/vms/dashboard.php" style="color:#ffffff;"><img src="/vms/images/synokem-logo.png" 
             style="margin-right: 5px; margin-top: -8px;"
             width="30" alt="logo" > VMS </a>
             </h1>
@@ -28,7 +28,7 @@
                         </li>
                          <li>
                             <a class="tooltip-tip ajax-load" href="/vms/dashboard.php" title="Create Pass">
-                                <i class="icon-feed"></i>
+                                <i class="icon-home"></i>
                                 <span>Home</span>
 
                             </a>
@@ -36,31 +36,29 @@
                            
                         <li>
                             <a class="tooltip-tip ajax-load" href="/vms/php/active_users_0.php" title="Active Visitors">
-                                <i class="icon-feed"></i>
+                                <i class="icon-user"></i>
                                 <span>Active Visitors</span>
                             </a>
                         </li>
                        
                         <li>
                             <a class="tooltip-tip ajax-load" href="/vms/php/phone_0.php" title="Create Pass">
-                                <i class="icon-feed"></i>
+                                <i class="icon-document"></i>
                                 <span>Create Pass</span>
 
                             </a>
                         </li>
                         <li>
                             <a class="tooltip-tip ajax-load" href="/vms/php/checkout_0.php" title="Check Out">
-                                <i class="icon-feed"></i>
+                                <i class="icon-arrow-right"></i>
                                 <span>Check Out</span>
 
                             </a>
                         </li>
                         
-                       
-                        
                         <li>
                             <a class="tooltip-tip ajax-load" href="/vms/php/logout.php?log" title="Log out">
-                                <i class="icon-feed"></i>
+                                <i class="icon-chevron-right"></i>
                                 <span>Log Out</span>
                             </a>
                         </li>

@@ -11,7 +11,7 @@ $fetch=mysqli_fetch_array($query);
  <div id="skin-select">
         <div id="logo">
             <h1 style="text-align:left;">
-            <a href="/vms/index_1.php" style="color:#ffffff;"><img src="images/synokem-logo.png" 
+            <a href="/vms/index_1.php" style="color:#ffffff;"><img src="/vms/images/synokem-logo.png" 
             style="margin-right: 5px; margin-top: -8px;"
             width="30" alt="logo" > VMS </a>
             </h1>
@@ -35,14 +35,14 @@ $fetch=mysqli_fetch_array($query);
                         </li>
                            <li>
                             <a class="tooltip-tip ajax-load" href="/vms/index_1.php" title="Log out">
-                                <i class="icon-feed"></i>
+                                <i class="icon-home"></i>
                                 <span>Home</span>
                             </a>
                         </li>
                         
                         <li class="hide1">
                             <a class="tooltip-tip ajax-load" href="#" title="Employee">
-                                <i class="icon-document-edit"></i>
+                                <i class="icon-user-group"></i>
                                 <span>Employee</span>
                             </a>
                             <ul>
@@ -80,7 +80,7 @@ $fetch=mysqli_fetch_array($query);
                         </li>
                         <li class="hide1">
                             <a class="tooltip-tip ajax-load" href="#" title="Admin User">
-                                <i class="icon-document-edit"></i>
+                                <i class="icon-user"></i>
                                 <span>Admin User</span>
 
                             </a>
@@ -104,7 +104,7 @@ $fetch=mysqli_fetch_array($query);
                         </li>
                         <li>
                             <a class="tooltip-tip ajax-load" href="/vms/php/logout.php?log" title="Log out">
-                                <i class="icon-feed"></i>
+                                <i class="icon-chevron-right"></i>
                                 <span>Log Out</span>
                             </a>
                         </li>

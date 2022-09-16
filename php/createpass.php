@@ -38,15 +38,16 @@ function onlyAlphabets(evt) {
 <h1>Create Pass</h1>         
 	<div class="left">
 		<label style="margin-left:10px;">Name : </label>
-		<input type="text" name="name1" onkeypress="return onlyAlphabets(event);"  placeholder="Name" value=""  
+		<input required type="text" name="name1" onkeypress="return onlyAlphabets(event);"  placeholder="Name" value=""  
 		style="width: 50%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 70px;"><br>           
 		<label style="margin-left:10px;">Gender : </label>             
-		<input <?php if($fetch=="male"){echo "checked";} ?> type="radio" name="gender" value="male" style="margin-left: 60px;"><label style="margin-left: 5px;">Male</label>             
-		<input <?php if($fetch=="female"){echo "checked";} ?> type="radio" name="gender" value="female" style="margin-left: 20px;"><label style="margin-left: 5px;">Female</label><br>
+		<input required <?php if($fetch=="male"){echo "checked";} ?> type="radio" name="gender" value="male" style="margin-left: 60px;">
+		<label style="margin-left: 5px;">Male</label>             
+		<input <?php if($fetch=="female"){echo "checked";} ?> type="radio" name="gender" value="female" style="margin-left: 20px;">
+		<label style="margin-left: 5px;">Female</label><br>
 		<label style="margin-left:10px;">Phone : </label>
-		<input type="Number" name="phone" readonly="readonly" placeholder="Phone No" value="<?php echo
-		$phone1 ?>" style="width: 50%; height: 30px; color: #000000; border-radius: 5px;border:none;
-		margin: 5px 5px 5px 68px; padding: 5px;"><br>
+		<input type="Number" name="phone" readonly="readonly" placeholder="Phone No" value="<?php echo $phone1 ?>" 
+		style="width: 50%; height: 30px; color: #000000; border-radius: 5px;border:none; margin: 5px 5px 5px 68px; padding: 5px;"><br>
 		<label style="margin-left: 10px;">Department : </label>                
 		<select name="department"  style="width: 50%; height: 30px; border-radius: 5px;border:none; padding: 5px; margin: 5px 28px; color: #000000">
 		<?php                          

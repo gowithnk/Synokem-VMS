@@ -35,10 +35,7 @@ $fetch2=mysqli_fetch_array($query);
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Le styles -->
-
-
-
-    <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/loader-style.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
      <link rel="stylesheet" href="css/custom.css">

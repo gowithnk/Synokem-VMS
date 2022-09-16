@@ -10,12 +10,6 @@
             <span class="entypo-menu"></span>
         </a>
         
-
-        
-
-
-
-
         <div class="skin-part">
             <div id="tree-wrap">
                 <div class="side-bar">
@@ -66,7 +60,7 @@
                         
                         <li>
                             <a class="tooltip-tip ajax-load" href="php/logout.php?log" title="Log out">
-                                <i class="icon-feed"></i>
+                                <i class="icon-chevron-right"></i>
                                 <span>Log Out</span>
                             </a>
                         </li>

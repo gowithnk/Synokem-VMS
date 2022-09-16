@@ -7,7 +7,7 @@ if($db)
 }
 else
 {
-	echo "not";
+	echo "connection failed";
 }
 
 $username=$_POST['username'];

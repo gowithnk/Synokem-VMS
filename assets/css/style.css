@@ -3061,3 +3061,18 @@ small.pull-right {
     color: #000000;
     border-radius: 3px;
 }
+/* active visitor  */
+.active_users {
+    margin-bottom: -10px;
+}
+
+.au_title {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.au_number {
+    color: green;
+    font-size: 25px;
+}
