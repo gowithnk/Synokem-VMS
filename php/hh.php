@@ -1,14 +1,5 @@
 <?php
-$db=mysqli_connect('localhost','root','','newuser');
-
-if($db)
-{
-	echo "connection established";
-}
-else
-{
-	echo "connection failed";
-}
+include('php/dbconn.php');
 
 $username=$_POST['username'];
 
