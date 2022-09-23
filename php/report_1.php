@@ -41,13 +41,13 @@
   
     $( "#datepicker" ).datepicker({
 	dateFormat: 'yy-mm-dd',
-  minDate: -30,
+  minDate: -90,
   maxDate:0,
   } );
   
    $( "#datepicker1" ).datepicker({
 	dateFormat: 'yy-mm-dd',
-  minDate: -30,
+  minDate: -90,
   maxDate:0,
   } );
   
