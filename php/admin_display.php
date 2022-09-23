@@ -28,8 +28,9 @@
 	th
 	{
 		font-family: verdana;
-		font-size: 23px;
+		font-size: 18px;
 		color: skyblue;
+		padding: 5px;
 	}
 
 </style>

@@ -69,7 +69,7 @@ if(!empty($rowcount == 0)){
 	echo "<tr>";
 		echo "<th> Visitor Name</th>";
 		echo "<th> Phone</th>";
-        echo "<th> Log Out</th>";
+        echo "<th> Log Out (Exit)</th>";
 	echo "</tr>";
 }
     
@@ -79,7 +79,7 @@ while ($fetch=mysqli_fetch_array($query))
     if(empty($fetch[8])){ 
     echo "<td> $fetch[Name] </td>";
     echo "<td> $fetch[Phone] </td>";
-    echo "<td> <a class='delete_data' href='checkout_0.php'> Log out</a> </td>";
+    echo "<td> <a class='delete_data' href='checkout_0.php'> Check Out</a> </td>";
     }
 }
 echo "</tr>";

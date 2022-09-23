@@ -28,8 +28,9 @@
 	th
 	{
 		font-family: verdana;
-		font-size: 23px;
+		font-size: 16px;
 		color: skyblue;
+		padding: 5px;
 	}
 	.delete_data{
 	padding: 3px 8px;
