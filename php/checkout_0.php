@@ -37,7 +37,7 @@
 
     <!-- SIDE MENU -->
 
-    <?php include('../sidebar.php');
+    <?php include('../sidebar_h.php');
 
 
     ?>

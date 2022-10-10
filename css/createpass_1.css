@@ -19,33 +19,26 @@ color: white;
 }
 .left
 {
-	float: left;
-	width: 75%;
 	border:0px solid black;
 	color: white;
 	padding: 10px;
 }
 .right
 {
-	float: right;
-	width: 25%;
 	border:0px solid black;
 }
 .image_box
 {
 	border:0px solid white;
-	width: 180px;
-	height: 140px;
-	margin-left: 10px;
+	width: 100%;
 	margin-top: 0px;
 }
 .qr
 {
-	border:0px solid white;
-	width: 80%;
-	height: 120px;
-	margin-left: 10px;
-	margin-top: 10px;
+	margin: 10px 0px;
+}
+.qr > img{
+	width: 100px;
 }
 .btn
 {
@@ -70,4 +63,7 @@ color: white;
     color: black;
     font-weight: 700;
     float: left;
+}
+#results{
+	margin-top: 10px;
 }

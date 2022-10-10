@@ -45,7 +45,7 @@
              <ul style="margin-right:0;" class="nav navbar-nav navbar-right">
                  <li>
                      <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                         <img alt="" class="admin-pic img-circle" src="http://api.randomuser.me/portraits/thumb/men/10.jpg">Hi, Niranjan <b class="caret"></b>
+                         <img alt="" class="admin-pic img-circle" src="/images/synokem-logo.png">Hi, Niranjan <b class="caret"></b>
                      </a>
                  </li>
                  <li>

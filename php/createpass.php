@@ -33,73 +33,88 @@ function onlyAlphabets(evt) {
 
  </head>
  <body onload='document.form1.text1.focus()'> 
- <form action="new.php" method="post" name="form1">
-<div class="back_ground">     
-<h1>Create Pass</h1>         
-	<div class="left">
-		<label style="margin-left:10px;">Name : </label>
-		<input required type="text" name="name1" onkeypress="return onlyAlphabets(event);"  placeholder="Name" value=""  
-		style="width: 50%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 70px;"><br>           
-		<label style="margin-left:10px;">Gender : </label>             
-		<input required <?php if($fetch=="male"){echo "checked";} ?> type="radio" name="gender" value="male" style="margin-left: 60px;">
-		<label style="margin-left: 5px;">Male</label>             
-		<input <?php if($fetch=="female"){echo "checked";} ?> type="radio" name="gender" value="female" style="margin-left: 20px;">
-		<label style="margin-left: 5px;">Female</label><br>
-		<label style="margin-left:10px;">Phone : </label>
-		<input type="Number" name="phone" readonly="readonly" placeholder="Phone No" value="<?php echo $phone1 ?>" 
-		style="width: 50%; height: 30px; color: #000000; border-radius: 5px;border:none; margin: 5px 5px 5px 68px; padding: 5px;"><br>
-		<label style="margin-left: 10px;">Department : </label>                
-		<select name="department"  style="width: 50%; height: 30px; border-radius: 5px;border:none; padding: 5px; margin: 5px 28px; color: #000000">
-		<?php                          
-		include ('dbconn.php');
-		$sql="Select * from department";
-		$query=mysqli_query($db,$sql);
-						
-			while($fetch=mysqli_fetch_array($query)) {
-			
-		?>
-		<option value="<?php echo $fetch[1]?>"><?php echo $fetch[1]?></option>
-			
-		<?php
-		}
-		?>
-
-		</select><br>
+ <form class="back_ground" action="new.php" method="post" name="form1">
+ <h1>Create Pass</h1> 
+	<div class="row">           
+		<div class="col-md-7 col-sm-12 ">
+			<label style="margin-left:10px;">Name : </label>
+			<input required type="text" name="name1" onkeypress="return onlyAlphabets(event);"  placeholder="Name" value=""  
+			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 70px;"><br>           
+			<label style="margin-left:10px;">Gender : </label>             
+			<input required <?php if($fetch=="male"){echo "checked";} ?> type="radio" name="gender" value="male" style="margin-left: 60px;">
+			<label style="margin-left: 5px;">Male</label>             
+			<input <?php if($fetch=="female"){echo "checked";} ?> type="radio" name="gender" value="female" style="margin-left: 20px;">
+			<label style="margin-left: 5px;">Female</label><br>
+			<label style="margin-left:10px;">Phone : </label>
+			<input type="Number" name="phone" readonly="readonly" placeholder="Phone No" value="<?php echo $phone1 ?>" 
+			style="width: 60%; height: 30px; color: #000000; border-radius: 5px;border:none; margin: 5px 5px 5px 68px; padding: 5px;"><br>
 			<label style="margin-left:10px;">Whom To Meet : </label>
-				<select name="person_meet_id"   style="border-radius: 5px; height: 30px;color: #000; width: 50%; margin: 5px 10px">
-					<?php 
-						include ('dbconn.php');
-						$sql="Select * from emp_table";
-						$query=mysqli_query($db,$sql);
-						
-						while($fetch=mysqli_fetch_array($query)) {
-							?>
-							<option value="<?php echo $fetch[0]?>"><?php echo $fetch[1]?></option>
+			<select name="person_meet_id"   style="border-radius: 5px; height: 30px;color: #000; width: 60%; margin: 5px 12px">
+				<?php 
+					include ('dbconn.php');
+					$sql="Select * from emp_table";
+					$query=mysqli_query($db,$sql);
+							
+					while($fetch=mysqli_fetch_array($query)) {
+						?>
+						<option value="<?php echo $fetch[0]?>"><?php echo $fetch[1]?></option>
 
-							<?php
-						}
-					?>
-					
-				</select>
-			<input type="submit" name="submit" value="Create"  style="width: 30%; height: 26px; border-radius: 15px;border:none; margin-left: 130px; padding: 5px; margin-top: 35px; cursor: pointer; color: #000">
-			<div class="qr">
-				<?php include('qr.php'); 
+						<?php
+					}
+				?>
+			</select><br>
+			<label style="margin-left: 10px;">Department : </label>                
+			<select name="department"  style="width: 60%; height: 30px; border-radius: 5px;border:none; padding: 5px; margin: 5px 30px; color: #000000">
+			<?php                          
+			include ('dbconn.php');
+			$sql="Select * from department";
+			$query=mysqli_query($db,$sql);
+							
+				while($fetch=mysqli_fetch_array($query)) {
+				
+			?>
+			<option value="<?php echo $fetch[1]?>"><?php echo $fetch[1]?></option>
+				
+			<?php
+			}
+			?>
+			</select><br>
+			<label style="margin-left:10px;">Purpose : </label>
+			<input required type="text" name="purpose" onkeypress="return onlyAlphabets(event);"  placeholder="Purpose" value=""  
+			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 55px;"><br> 
+			<label style="margin-left:10px;">City : </label>
+			<input required type="text" name="city" onkeypress="return onlyAlphabets(event);"  placeholder="City" value=""  
+			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 83px;"><br>
+			<label style="margin-left:10px;">Email : </label>
+			<input type="text" name="email" onkeypress="return onlyAlphabets(event);"  placeholder="Email Address" value=""  
+			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 73px;"><br>
+			<label style="margin-left:10px;">Address : </label>
+			<input type="text" name="address" onkeypress="return onlyAlphabets(event);"  placeholder="Visitor's Address" value=""  
+			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 57px;"><br>
+			<input type="submit" name="submit" value="Create" class="btn btn-info" 
+			style="width: 60%; height: 26px; border-radius: 15px;border:none; margin-left: 130px; padding: 5px; margin-top: 20px; margin-bottom: 20px; cursor: pointer; color: #000">
 
-				$_SESSION['qr']=$e;?>
-			</div>
 		</div>
-		<div class="right">
-			<div class="image_box">	
-            
-					<?php include('livevideo.php'); ?>
-				<input type="hidden" id="image_input" name="image">
-            
-			</div>
-			<div class="image_box" style="margin-top:75px">	
-            
-    
-			</div>
+
+		<div class="col-md-5 col-sm-12">
 			
+			<div class="image_box">	
+				<div class="row">
+					<div class="col-md-9 col-sm-9">
+						<?php include('livevideo.php'); ?>
+					</div>
+					<div class="qr col-md-3 col-sm-3">
+						<?php include('qr.php'); 
+
+						$_SESSION['qr']=$e;?>
+					</div>
+					
+				</div>
+				<input class="btn btn-info" type=button value="Take Snapshot" onClick="take_snapshot()">
+				<div id="results"></div>
+				<input type="hidden" id="image_input" name="image">
+				
+			</div>
 		</div>
 	</div>
 </form>

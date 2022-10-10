@@ -26,7 +26,8 @@ else
 }
 */
 
-$sql="UPDATE inquery SET Out_Time='$out_time' where Phone='$phone' and Date='$date' and Id='$p'";
+// $sql="UPDATE inquery SET Out_Time='$out_time' where Phone='$phone' and Date='$date' and Id='$p'";
+$sql="UPDATE inquery SET Out_Time='$out_time' where Phone='$phone' and Id='$p'";
 $query=mysqli_query($db,$sql);
 if($query)
 {
