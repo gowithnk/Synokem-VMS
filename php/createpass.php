@@ -34,9 +34,9 @@ function onlyAlphabets(evt) {
  </head>
  <body onload='document.form1.text1.focus()'> 
  <form class="back_ground" action="new.php" method="post" name="form1">
- <h1>Create Pass</h1> 
+ 	<h1>Create Pass</h1> 
 	<div class="row">           
-		<div class="col-md-7 col-sm-12 ">
+		<div class="col-md-6 col-sm-12 ">
 			<label style="margin-left:10px;">Name : </label>
 			<input required type="text" name="name1" onkeypress="return onlyAlphabets(event);"  placeholder="Name" value=""  
 			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 70px;"><br>           
@@ -79,24 +79,27 @@ function onlyAlphabets(evt) {
 			}
 			?>
 			</select><br>
+			<label style="margin-left:10px;">Email : </label>
+			<input type="email" name="v_email" placeholder="Email Address" value=""  
+			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 73px;"><br>
+			<label style="margin-left:10px;">Company : </label>
+			<input required type="text" name="company" placeholder="ABC Company" value=""  
+			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 48px;"><br> 
 			<label style="margin-left:10px;">Purpose : </label>
-			<input required type="text" name="purpose" onkeypress="return onlyAlphabets(event);"  placeholder="Purpose" value=""  
+			<input required type="text" name="purpose" placeholder="Purpose" value=""  
 			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 55px;"><br> 
 			<label style="margin-left:10px;">City : </label>
-			<input required type="text" name="city" onkeypress="return onlyAlphabets(event);"  placeholder="City" value=""  
-			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 83px;"><br>
-			<label style="margin-left:10px;">Email : </label>
-			<input type="text" name="email" onkeypress="return onlyAlphabets(event);"  placeholder="Email Address" value=""  
-			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 73px;"><br>
+			<input required type="text" name="city" placeholder="City" value=""  
+			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 83px;"><br>	
 			<label style="margin-left:10px;">Address : </label>
-			<input type="text" name="address" onkeypress="return onlyAlphabets(event);"  placeholder="Visitor's Address" value=""  
+			<input type="text" name="address" placeholder="Visitor's Address" value=""  
 			style="width: 60%; height:30px; border-radius: 5px;border:none; padding: 5px;margin: 5px 5px 5px 57px;"><br>
 			<input type="submit" name="submit" value="Create" class="btn btn-info" 
 			style="width: 60%; height: 26px; border-radius: 15px;border:none; margin-left: 130px; padding: 5px; margin-top: 20px; margin-bottom: 20px; cursor: pointer; color: #000">
 
 		</div>
 
-		<div class="col-md-5 col-sm-12">
+		<div class="col-md-6 col-sm-12">
 			
 			<div class="image_box">	
 				<div class="row">

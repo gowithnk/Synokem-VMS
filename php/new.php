@@ -14,19 +14,22 @@ $name=$_POST['name1'];
 $gender=$_POST['gender'];
 $phone=$_POST['phone'];
 $department=$_POST['department'];
-
 $in_time=date("h:i");
 $date=date("Y-m-d");
 $person_meet_id=$_POST['person_meet_id'];
+$v_email=$_POST['v_email'];
+$purpose=$_POST['purpose'];
+$company=$_POST['company'];
+$city=$_POST['city'];
+$address=$_POST['address'];
 
 $sql="Select * from emp_table where id=$person_meet_id";
 $query=mysqli_query($db,$sql);
-
 $fetch=mysqli_fetch_array($query);
+
 $empEmail = $fetch['email_id'];
 $person_meet=$fetch['name'];
 $empPhone=$fetch['phone'];
-
 
 $img = $_POST['image'];
     $folderPath = "upload/";
@@ -42,7 +45,7 @@ $img = $_POST['image'];
     file_put_contents($file, $image_base64);	
 
 //SMS
-$smsMsg = 'New Visitor : - - - - - - -  Name - ' .$name .', Phone Number - ' .$phone .', Entry Time - ' .$in_time; 
+$smsMsg = 'New Visitor :  Name - ' .$name .', Phone Number - ' .$phone .', Entry Time - ' .$in_time; 
 $fields = array(
     "sender_id" => "TXTIND",
     "message" => "$smsMsg",
@@ -119,7 +122,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'New Visitor';
-    $mail->Body    = '<b>Name: </b>'. $name . '<br>' . '<b>Gender: </b>' . $gender . '<br>' . '<b>Phone: </b>' . $phone . '<br>' . '<b>Department: </b>' . $department . '<br>' . '<b>Person to Meet: </b>' . $person_meet . '<br>' . '<b>Date: </b>' . $date . '<br>' . '<b>Time: </b>' . $in_time . '<br>';
+    $mail->Body    = '<b>Name: </b>'. $name . '<br>' . '<b>Gender: </b>' . $gender . '<br>' . '<b>Phone: </b>' . $phone . '<br>' . '<b>Company: </b>' . $company . '<br>' . '<b>Purpose: </b>' . $purpose . '<br>' . '<b>Person to Meet: </b>' . $person_meet . '<br>' . '<b>Date: </b>' . $date . '<br>' . '<b>Time: </b>' . $in_time . '<br>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
@@ -128,8 +131,8 @@ try {
     echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
-$sql="insert into inquery(Name,Gender,Phone,Department,Person_Meet,In_Time,Date,qr_code,Image) values(
-'$name','$gender','$phone','$department','$person_meet','$in_time','$date','$e','$file')"; 
+$sql="insert into inquery(Name,Gender,Phone,Department,Person_Meet,In_Time,Date,qr_code,Image,Vemail,Company,Purpose,City,Address) values(
+'$name','$gender','$phone','$department','$person_meet','$in_time','$date','$e','$file','$v_email','$company','$purpose','$city','$address')"; 
 $query=mysqli_query($db,$sql); 
 if($query) 
 		{     

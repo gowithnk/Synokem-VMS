@@ -7,10 +7,10 @@
 
 <script language="JavaScript">
     Webcam.set({
-        width: 215,
-        height: 160,
+        width: 280,
+        height: 210,
         image_format: 'jpeg',
-        jpeg_quality: 90
+        jpeg_quality: 150
     });
   
     Webcam.attach( '#my_camera' );
