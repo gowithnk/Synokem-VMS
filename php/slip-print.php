@@ -1,10 +1,11 @@
 <?php
 include('dbconn.php');
-session_start();
-$phone=$_SESSION['phone'];
-$sql="Select * from inquery where Phone='$phone'";
+$id=$_GET['id'];
+
+$sql="select * from inquery where id='$id'";
 $query=mysqli_query($db,$sql);
 $fetch=mysqli_fetch_array($query);
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +17,7 @@ $fetch=mysqli_fetch_array($query);
 <body>
 <form action="../index_1.php" method="post">
 	<div class="slip_main">
-	<img src="../images/logo.png" width="200px"><br><br>
+    <img src="../images/logo.png" width="200px"><br><br>
 <!--Left box in the main form-->
 		<div class="slip_left">
 			
@@ -40,7 +41,7 @@ $fetch=mysqli_fetch_array($query);
 			style="height: 6px; width: 50%; border-radius: 5px;border: 1px solid black; padding: 8px; margin-left: 75px;"><br>
 			<div class="slip_btn">	
 				<input type="button" id="p1" value="Print" style="height: 25px; border-radius: 5px;border: 1px solid black; margin: 0px 10px; padding: 5px 30px; background-color:#d9e8f7; cursor:pointer;" onclick="print1()"><br>
-				<a href="../dashboard.php">	<input type="button" id="p2" value="Back" style="height: 25px; border-radius: 5px; margin: 0px 10px; border: 1px solid black;padding: 5px 30px; background-color:#d9e8f7; cursor:pointer;" ></a><br>
+				<a href="../index_1.php">	<input type="button" id="p2" value="Back" style="height: 25px; border-radius: 5px; margin: 0px 10px; border: 1px solid black;padding: 5px 30px; background-color:#d9e8f7; cursor:pointer;" ></a><br>
 			</div>
 		</div>
 <!--Right box in the main form-->
@@ -49,7 +50,7 @@ $fetch=mysqli_fetch_array($query);
 				<img src="<?php echo $fetch[9] ?>" height="120px" width="120">
 			</div>
             <div class="qr">
-				<img src="<?php echo $fetch[4] ?>" width="120">
+				<img src="<?php echo $fetch[4] ?>"  width="120">
 			</div>
 		</div>
 <!--Instruction box in the main form-->

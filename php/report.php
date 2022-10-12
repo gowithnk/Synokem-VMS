@@ -25,10 +25,19 @@
 	td
 	{
 		text-align: center;
-		height: 50px;
-		width: 150px;
+		font-size: 14px;
+		height: 40px;
+		width: 100px;
 		color: white;
 	}
+	.delete_data{
+	padding: 3px 8px;
+    background-color: #fba7a7;
+    color: #ffffff;
+    border-radius: 3px;
+	text-decoration: none;
+	font-size: 14px;
+}
 	img
 	{
 		border: none;
@@ -36,7 +45,7 @@
 	.new th
 	{
 		font-family: verdana;
-		font-size: 18px;
+		font-size: 14px;
 		color: skyblue;
 	}
 
@@ -58,13 +67,18 @@ echo "<table align='center' border='1' class='new'>";
 		echo "<th> Name</th>";
 		echo "<th> Gender</th>";
 		echo "<th> Phone</th>";
+		echo "<th> Email</th>";
+		echo "<th> Company</th>";
+		echo "<th> Purpose</th>";
+		echo "<th> City</th>";
+		echo "<th> Address</th>";
 		echo "<th> Image</th>";
 		echo "<th> Person Meet</th>";
 		echo "<th> Department</th>";
 		echo "<th> In Time</th>";
 		echo "<th> Out Time</th>";
-	
 		echo "<th> Date</th>";
+		echo "<th> Print</th>";
 	echo "</tr>";
 
 
@@ -74,12 +88,18 @@ while ($fetch=mysqli_fetch_array($query))
 		echo "<td> $fetch[Name]</td>";
 		echo "<td> $fetch[Gender]</td>";
 		echo "<td> $fetch[Phone]</td>";
-		echo "<td> <img src='$fetch[Image]' width='100' height='100'</td>";
+		echo "<td> $fetch[Vemail]</td>";
+		echo "<td> $fetch[Company]</td>";
+		echo "<td> $fetch[Purpose]</td>";
+		echo "<td> $fetch[City]</td>";
+		echo "<td> $fetch[Address]</td>";
+		echo "<td> <img src='$fetch[Image]' width='80' height='80'</td>";
 		echo "<td> $fetch[Department]</td>";
 		echo "<td> $fetch[Person_Meet]</td>";
 		echo "<td> $fetch[In_Time]</td>";
 		echo "<td> $fetch[Out_Time]</td>";
 		echo "<td> $fetch[Date]</td>";
+		echo "<td> <a class='delete_data' target='_blank' href='slip-print.php?id=$fetch[0]'>Print</a></td>";
 	echo "</tr>";
 }
 echo "</table>";

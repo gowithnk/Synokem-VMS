@@ -1,6 +1,7 @@
 <?php
 session_start();
 $e=$_SESSION['qr'];
+
 // Email
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -84,7 +85,7 @@ if ($err) {
 } else {
   echo $response;
 }
-
+// SMS End here ----------
 
 // mail
 

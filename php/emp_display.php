@@ -157,7 +157,7 @@ echo "</table>";
   </script>
 
 <form action="">
-<!--<input type="button" id="p3" value="Print" onclick="print12()" /> -->
+<!-- <input type="button" id="p3" value="Print" onclick="print12()" /> -->
 </form>
 <script type="text/javascript">
 	function print12()
@@ -168,6 +168,8 @@ echo "</table>";
 		w.style.display='block';
 
 	}
+
+
 
 </script>
 </body>
