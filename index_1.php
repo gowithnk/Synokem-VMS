@@ -1,5 +1,4 @@
 <?php
-
 include('php/dbconn.php');
 
 $sql = "Select count(*) from inquery";

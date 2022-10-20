@@ -33,10 +33,16 @@ $fetch=mysqli_fetch_array($query);
 
                             </a>
                         </li>
-                           <li>
-                            <a class="tooltip-tip ajax-load" href="/vms/index_1.php" title="Log out">
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="/vms/index_1.php" title="Home">
                                 <i class="icon-home"></i>
                                 <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="/vms/dashboard.php" title="Creatpass Home">
+                                <i class="icon-home"></i>
+                                <span>Creatpass Home</span>
                             </a>
                         </li>
                         

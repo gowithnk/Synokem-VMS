@@ -3,6 +3,7 @@
     if ($_SESSION['user'] == "") {
         header('location:index.html');
     }
+
     include('php/dbconn.php');
     $user = $_SESSION['user'];
 
