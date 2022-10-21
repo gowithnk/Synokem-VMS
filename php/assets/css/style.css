@@ -19,8 +19,8 @@ body {
     min-height: 100%;
     z-index: -2;
     margin: 0px !important;
-    background: linear-gradient(#1653b4,#153a76 ,#0e4091,#0e4091) !important;
-	background: -webkit-linear-gradient(#1653b4,#153a76 ,#0e4091,#0e4091) !important;
+    background: linear-gradient(#189adb,#189adb ,#0e4091,#0e4091) !important;
+	background: -webkit-linear-gradient(#189adb,#189adb ,#0e4091,#0e4091) !important;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;

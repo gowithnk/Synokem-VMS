@@ -175,11 +175,12 @@ if ($query = mysqli_query($db, $sql)) {
     <!-- /END OF CONTENT -->
 
     <!-- FOOTER -->
-    <div class="footer">
-        <div class="copyright">
-            <p><span class="entypo-heart"></span>2022 <a href="http://synokempharma.com">Synokem</a> All Rights Reserved</p>
-        </div>
-    </div>
+    
+    <?php
+
+    include('footer.php');
+
+    ?>
     <!-- / END OF FOOTER -->
 
     <!--  END OF PAPER WRAP -->

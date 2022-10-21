@@ -1,4 +1,9 @@
 <?php
+// if( isset($_SESSION["user"]) && $_SESSION["user"] != 'niranjan' ){  
+//     header('location:dashboard.php'); 
+//     } 
+
+
 include('php/dbconn.php');
 
 $sql = "Select count(*) from inquery";
@@ -189,19 +194,11 @@ if ($result = mysqli_query($db, $sql)) {
     <!-- /END OF CONTENT -->
 
     <!-- FOOTER -->
-    <div class="footer-space"></div>
-    <div id="footer">
-        <div class="devider-footer-left"></div>
-        <div class="time">
-            <p id="spanDate"></p>
-            <p id="clock"></p>
-        </div>
-        <div class="copyright">
-            <span class="entypo-heart"></span>2022 <a href="http://synokempharma.com">Synokem</a> All Rights Reserved
-        </div>
-        <div class="devider-footer"></div>
+    <?php
 
-    </div>
+    include('footer.php');
+
+    ?>
     <!-- / END OF FOOTER -->
 
     </div>
@@ -226,7 +223,6 @@ if ($result = mysqli_query($db, $sql)) {
 
     <!-- GAGE -->
 
-
     <script src="assets/js/jhere-custom.js"></script>
 
     <script>
@@ -242,7 +238,6 @@ if ($result = mysqli_query($db, $sql)) {
             gauge4.draw(Math.floor(Math.random() * 90));
         }, 3500);
     </script>
-
 
     <script type="text/javascript">
         /* Javascript
@@ -288,8 +283,6 @@ if ($result = mysqli_query($db, $sql)) {
                 '<span>%M</span>' + '<span class="start-min">:</span>' + '<span class="start-min">%S</span>'));
         });
     </script>
-
-
 
 </body>
 
